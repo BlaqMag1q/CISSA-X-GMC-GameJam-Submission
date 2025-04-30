@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkb2o47o3r8j5"]
+
+[ext_resource type="Script" uid="uid://bdbumgca0lqon" path="res://TheBossFight/scenes/end_screen.gd" id="1_cf6go"]
+[ext_resource type="Script" uid="uid://bwsd5xu8xn8ff" path="res://TheBossFight/scripts/menu_b.gd" id="2_gttju"]
+[ext_resource type="Texture2D" uid="uid://c3h6x4tal1yum" path="res://TheBossFight/assets/menu_button.png" id="3_rdpjc"]
+[ext_resource type="Texture2D" uid="uid://bd7k8p0h3sw1q" path="res://Buttons/try_again_button.png" id="4_1fwpi"]
+[ext_resource type="Texture2D" uid="uid://c0ff1g8rtpy5n" path="res://TheBossFight/assets/CityScape.webp" id="4_cf6go"]
+[ext_resource type="PackedScene" uid="uid://bekhfx7rlge5c" path="res://Title_Screen/menu_button.tscn" id="6_7hpig"]
+
+[node name="EndScreen" type="Node2D"]
+scale = Vector2(1.00187, 1)
+script = ExtResource("1_cf6go")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MenuB" type="Button" parent="."]
+visible = false
+offset_left = -87.0
+offset_top = -116.0
+offset_right = 93.0
+offset_bottom = -28.0
+script = ExtResource("2_gttju")
+
+[node name="MenuButton" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3.99252, -81)
+scale = Vector2(2.23947, 2.04021)
+texture = ExtResource("3_rdpjc")
+
+[node name="TryagainB" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0.478431)
+offset_left = -88.8339
+offset_top = -48.0
+offset_right = 86.1661
+offset_bottom = 39.0
+
+[node name="TryAgainButton" type="Sprite2D" parent="."]
+position = Vector2(-3.99255, 0)
+scale = Vector2(2.208, 2.04)
+texture = ExtResource("4_1fwpi")
+
+[node name="LoseSprite" type="Sprite2D" parent="."]
+modulate = Color(0.6, 0.258, 0.258, 0.803922)
+z_index = -1
+position = Vector2(126.763, 251)
+scale = Vector2(3.4018, 2.64844)
+texture = ExtResource("4_cf6go")
+
+[node name="WinSprite" type="Sprite2D" parent="."]
+modulate = Color(0.173418, 0.442297, 0.300977, 0.803922)
+z_index = -1
+position = Vector2(126.763, 251)
+scale = Vector2(3.4018, 2.64844)
+texture = ExtResource("4_cf6go")
+
+[node name="Menu button" parent="." instance=ExtResource("6_7hpig")]
+layer = 3
+
+[node name="ResultLabel" type="Label" parent="."]
+offset_left = -159.701
+offset_top = -201.0
+offset_right = -64.7014
+offset_bottom = -152.0
+scale = Vector2(3, 3)
+text = "SampleTEXT
+"
+horizontal_alignment = 1
